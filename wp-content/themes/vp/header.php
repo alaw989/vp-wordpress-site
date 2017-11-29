@@ -22,13 +22,16 @@
         <div class="container">
             <div class="upheader-container">
                 <div class="logo-container">
-                    <a href="<?php echo home_url(); ?>"><img src="/vp/wp-content/uploads/2017/10/vplogowhite-1.png"/> </a>
+                    <a href="<?php echo home_url(); ?>">
+                        <img src="/vp/wp-content/uploads/2017/10/vplogowhite-1.png" /> </a>
                 </div>
                 <div class="upheader-box">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <div class="box-right">
                         <p>Location</p>
-                        <h4><?php bloginfo('description'); ?></h4>
+                        <h4>
+                            <?php bloginfo('description'); ?>
+                        </h4>
                     </div>
                 </div>
                 <div class="upheader-box">
@@ -78,12 +81,14 @@
     <div class="blog-header">
         <div class="banner-container" style="background-image: url('<?php echo header_image();?>'); ">
             <div class="title-container">
-                 <?php //masthead title widget
-    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Box3')): ?>          
-    <?php endif; ?>  
-              
+                <?php //masthead title widget
+    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Box3')): ?>
+                <?php endif; ?>
+
                 <div class="subtitle-container">
-                    <h3><span>STRUCTURAL ENGINEERING AND STEEL DETAILING</span></h3>
+                    <h3>
+                        <span>STRUCTURAL ENGINEERING AND STEEL DETAILING</span>
+                    </h3>
                 </div>
             </div>
         </div>

@@ -1,8 +1,24 @@
 <?php get_header() ?>
+
+<section>
+    <div class="about-wrap">
+        <div class="container">
+            <div class="about-header">
+                <h2 class="about-section__header">
+                    <span>ABOUT</span>
+                </h2>
+            </div>
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Box4')) : ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
 <div class="services-wrap">
     <div class="container">
         <div class="services-header">
-            <h2><span>QUALITY SERVICES</span></h2>
+            <h2>
+                <span>QUALITY SERVICES</span>
+            </h2>
             <p>Our firm's strongest in-house areas of specialization are as follows</p>
         </div>
         <div class="services-wrapper">
@@ -18,11 +34,15 @@
         </div>
     </div>
 </div>
+
+<!--
 <?php if (have_posts()) : ?>
 <?php while(have_posts()) : the_post(); ?>
 <div class="about-wrapper">
     <div class="container">
-        <h2 class="about-title"><?php the_title(); ?></h2>
+        <h2 class="about-title">
+            <?php the_title(); ?>
+        </h2>
         <div class="about-container">
             <div class="about-section">
                 <p class="about-content">
@@ -38,4 +58,5 @@
     <?php __('No Posts Found'); ?>
 </p>
 <?php endif; ?>
+-->
 <?php get_footer() ?>

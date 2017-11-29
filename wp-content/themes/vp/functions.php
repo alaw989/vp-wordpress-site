@@ -17,6 +17,7 @@
       wp_enqueue_style('style', get_template_directory_uri() . '/app/css/normalize.css');
       wp_enqueue_style('style', get_template_directory_uri() . '/app/css/styles.css');
       wp_enqueue_style('style', get_template_directory_uri() . '/app/css/grid12.css');
+      wp_enqueue_style('style', get_template_directory_uri() . '/app/css/main.css');
   }
 
     add_action( 'wp_enqueue_scripts', 'enqueue_theme_css' );
@@ -59,6 +60,19 @@
     }
 
     add_action('widgets_init', 'wpb_init_widgets3');
+
+    function wpb_init_widgets4($id) {
+      register_sidebar(array(
+        'name' => 'Box4',
+        'id'   => 'Box4',
+        'before_widget' => '<div class="about-section__content">',
+        'after_widget'  => '</div>', 
+        'before_title'  => '<h1>',
+        'after_title'   => '</h1>'
+      ));
+    }
+
+    add_action('widgets_init', 'wpb_init_widgets4');
 
     add_theme_support('custom-background');
     add_theme_support('custom-header');
